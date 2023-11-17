@@ -1,0 +1,54 @@
+.booking-page, .confirmation {
+  height: 80vh;
+  background-color: #fbdabb;
+}
+
+.booking-page .container,
+.confirmation .container {
+  display: grid;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  padding-bottom: 4rem;
+  height: 100%;
+}
+
+.booking-form {
+  background-color: #edefee;
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  gap: 20px;
+  height: 100%;
+  width: 50%;
+  min-width: 35ch;
+  padding: 1.5rem;
+}
+
+.booking-form .input-row {
+  text-align: left;
+}
+
+.booking-form label {
+  font-size: 14pt;
+}
+
+.booking-form input,
+.booking-form select {
+  height: 2rem;
+  font-size: 12pt;
+  padding: 5px;
+}
+
+.confirmation h1, 
+.confirmation h2,
+.confirmation h3,
+.confirmation p {
+  color: #333333;
+}
+
+@media screen and (max-width: 940px) {
+  .booking-page,.confirmation {
+    height: 90%;
+  }
+
+}

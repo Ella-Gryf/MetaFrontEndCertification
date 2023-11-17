@@ -1,0 +1,25 @@
+.login {
+  height: 80vh;
+  background-color: #495E57;
+  z-index: 0;
+}
+
+.login .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 2rem;
+}
+
+.login h1 {
+  color: #F4CE14;
+  padding: 3rem;
+}
+
+.login .btn {
+  width: 11rem;
+  padding: 1rem;
+  margin-right: 16px;
+  margin-left: 16px;
+}

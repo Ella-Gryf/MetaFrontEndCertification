@@ -1,0 +1,32 @@
+.menu {
+  height: 80vh;
+  background-color: #495e57;
+}
+
+.menu .container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.menu .menu-card {
+  margin: 3rem 3rem 3rem 3rem;
+  display: flex;
+  width: 70%;
+  flex-direction: column;
+  background-color: #edefee;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+}
+
+.menu h1 {
+  color: #333333
+}
+
+.menu .lead-text {
+  font-style: italic;
+  padding: 2rem;
+  color: #333333;
+}
