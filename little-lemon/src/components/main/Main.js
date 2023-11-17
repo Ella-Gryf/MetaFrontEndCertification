@@ -16,6 +16,10 @@ import Order from './order/Order.js';
 import Login from './login/Login.js';
 
 
+import ItemCard from './order/ItemCard.js';
+import {greekSalad, bruchetta, dessert} from './order/menuVars.js';
+
+
 const Main = () => {
 
   const { availableTimes, dispatchTimes } = useTimes();
@@ -106,7 +110,10 @@ const Main = () => {
           element={<BookingPage formik={formik} availableTimes={availableTimes.data} />} />
         <Route path='/reservations/confirmation' 
           element={<ConfirmedBooking formData={submissionData} />} />
-        <Route path='/order' element={<Order />} />
+        <Route path='/order' element={<Order />} />   
+        <Route path='/order/salad' element={<ItemCard dish={greekSalad}/>} />
+        <Route path='/order/bruchetta' element={<ItemCard dish={bruchetta} />} />
+        <Route path='/order/dessert' element={<ItemCard dish={dessert} />} />        
         <Route path='/login' element={<Login />} />
       </Routes>
     </>

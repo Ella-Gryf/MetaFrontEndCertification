@@ -1,0 +1,108 @@
+.item-card {
+  height: 100%;
+  background-color: #fbdabb;
+  display: flex;
+  /*justify-content: space-between;*/
+  padding: 3rem;
+}
+
+.item-card .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-color: #edefee;
+  border-radius: 15px;
+  width: 940px;
+}
+
+.item-card * {
+  color: #333333;
+}
+
+.item-card h2 {
+  color: #ee9972;
+  font-weight: 800;
+}
+
+.item-card .row {
+  display: flex;
+  padding: 2rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+
+.item-card .row-1 {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item-card .row-2 {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.item-card .row-2 p {
+  padding: 2rem;
+  font-style: italic;
+}
+
+.item-card .row-3 {
+  flex-direction: column;
+}
+
+.item-card img {
+  border-radius: 10%;
+  height: auto;
+  width: 700px;
+}
+
+.extra-options {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+  width: 25rem;
+}
+
+.extra-container, .extra-container h3 {
+  display: flex;
+  width: 24rem;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.extra-item {
+  display: flex;
+  font-size: 16pt;
+  background-color: #fff;
+  align-items: center;
+  border: 0.5px solid black;
+  width: 17rem;
+  
+}
+
+.extra-item span {
+  margin-left: 0.5rem;
+}
+
+.extra-scale {
+  display: flex;
+  justify-content: center;
+  font-size: 16pt;
+  padding: 0.5rem;
+  width: 7rem;
+}
+
+.extra-scale button {
+  width: 2rem;
+  font-size: 16pt;
+}
+
+.extra-options .quantity {
+  padding: 5px;
+}

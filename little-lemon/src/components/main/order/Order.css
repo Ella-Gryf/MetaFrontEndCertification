@@ -4,29 +4,13 @@
 }
 
 .order .container {
-  width: 100%;
   display: flex;
-  justify-content: center;
-  text-align: center;
-}
-
-.order .order-card {
-  margin: 3rem 3rem 3rem 3rem;
-  display: flex;
-  width: 70%;
-  flex-direction: column;
-  background-color: #edefee;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  border-radius: 15px;
+  padding: 1rem;
 }
 
-.order h1 {
-  color: #333333
-}
-
-.order .lead-text {
-  font-style: italic;
-  padding: 2rem;
-  color: #333333;
+.order .btn {
+  height: 4rem;
+  padding: 3rem;
 }

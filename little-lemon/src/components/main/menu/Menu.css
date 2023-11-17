@@ -21,12 +21,22 @@
   border-radius: 15px;
 }
 
-.menu h1 {
-  color: #333333
+.menu-card {
+  color: #333333;
+  justify-content: space-between;
+}
+
+.menu h1,
+.menu p {
+  padding: 1rem;
+}
+
+.menu h4 {
+  margin-top: 4rem;
+  padding: 1rem;
 }
 
 .menu .lead-text {
   font-style: italic;
-  padding: 2rem;
   color: #333333;
 }
