@@ -17,7 +17,7 @@ import Login from './login/Login.js';
 
 
 import ItemCard from './order/ItemCard.js';
-import {greekSalad, bruchetta, dessert} from './order/menuVars.js';
+import {greekSalad, bruchetta, dessert} from '../../variables/menuVars.js';
 
 
 const Main = () => {

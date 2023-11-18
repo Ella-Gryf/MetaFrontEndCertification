@@ -6,8 +6,6 @@ import saladImg from '../../../assets/greeksalad.jpg';
 import bruchettaImg from '../../../assets/bruchetta.svg';
 import dessertImg from '../../../assets/lemondessert.jpg';
 
-import { BsBasket } from "react-icons/bs";
-
 
 const ItemCard = ({dish}) => {
 
