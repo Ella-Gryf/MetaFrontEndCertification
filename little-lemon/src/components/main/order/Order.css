@@ -1,16 +1,35 @@
 .order {
-  height: 80vh;
+  height: 100%;
   background-color: #ee9972;
 }
 
 .order .container {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
+  padding: 2rem;
+}
+
+.order .order-option {
+  position: relative;
+  display: inline-block;
+  padding: 2rem;
+}
+
+.order .order-img {
+  height: auto;
+  width: 500px;
+  opacity: 0.8;
 }
 
 .order .btn {
-  height: 4rem;
-  padding: 3rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px 15px;
+  padding: 1.5rem;
+  width: 200px;
+  border: 2px solid black;
 }
