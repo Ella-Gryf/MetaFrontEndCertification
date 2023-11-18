@@ -1,0 +1,46 @@
+
+.specials-card {
+  color: #edefee; 
+  border-radius: 10%;
+  text-align: center;
+  width: 400px;
+  height: 520px;
+  background-color: #f4f4f4;
+  position: relative;
+}
+
+.specials-card img {
+  width: 400px;
+  height: 270px;
+  object-fit: cover;
+}
+
+.specials-card .head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem;
+}
+
+.specials-card :is(h1, h2, h3, p) {
+  color: #333333;
+}
+
+.specials-card h4 {
+  color: #ee9972;
+  font-weight: 800;
+}
+
+.specials-card p {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  text-align: left;
+}
+
+.specials-card .order-btn {
+  position: absolute;
+  left: 1.5rem;
+  bottom: 30px;
+}
+
+

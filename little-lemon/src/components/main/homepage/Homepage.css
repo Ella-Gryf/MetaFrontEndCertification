@@ -41,7 +41,7 @@
 
 /* flex */
 .specials .container {
-  margin-top: 5rem;
+  margin-top: 4rem;
   margin-left: 0;
   margin-right: 0;
 }
@@ -95,17 +95,28 @@
 
 /* Specials */
 
-.specials .row-1 {
+.specials .row {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 2rem;
   margin-left: 0;
   margin-right: 0;
 }
 
-.specials :is(h1, h2) {
+
+
+.specials :is(h1, h2, p) {
   color: #333333;
 }
+
+
+
+
+
+
+
+
 
 /* Testimonials */
 
