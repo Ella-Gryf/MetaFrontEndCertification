@@ -8,7 +8,10 @@ describe('useTimes', () => {
 
   test('Test useTimes dispatch when fetchAPI returns valid times data', () => {
 
-    const mockApiData = ['10:00', '15:00'];
+    const mockApiData = {
+      type: 'SUCCESS',
+      value: ['10:00', '15:00'],
+    }
   
     render(<ExampleTimesComponent mockApiData={mockApiData} />);
 
@@ -20,13 +23,16 @@ describe('useTimes', () => {
 
   test('Test useTimes dispatch when fetchAPI returns error', () => {
 
-    const mockApiData = 'fetchAPI error message';
+    const mockApiData = {
+      type: 'FAILURE',
+      value: 'fetchAPI error message',
+    }
   
     render(<ExampleTimesComponent mockApiData={mockApiData} />);
 
     const result = screen.getByTestId('error');
     console.log(result.textContent)
-    expect(result.textContent).toEqual(expect.stringContaining(`${mockApiData}`));
+    expect(result.textContent).toEqual(expect.stringContaining(`${mockApiData.value}`));
   });
 
 });

@@ -5,29 +5,26 @@ const ExampleTimesComponent = ({mockApiData}) => {
 
   const { availableTimes, dispatchTimes } = useTimes();
 
-  const fetchData = async (date) => {
-    dispatchTimes({ type: 'FETCH_DATA_REQUEST' });
-
-    // Simulate api returning an error 
-    if (mockApiData.includes('error')) {
-      dispatchTimes({ type: 'FETCH_DATA_FAILURE', payload: mockApiData })
+  const fetchData = (mockData) => {
+    if (mockData.type === 'REQUEST') {
+      dispatchTimes({ type: 'FETCH_DATA_REQUEST' });
+    } else if (mockData.type === 'SUCCESS') {
+      dispatchTimes({ type: 'FETCH_DATA_SUCCESS', payload: mockData.value });
+    } else if (mockData.type === 'FAILURE') {
+      dispatchTimes({ type: 'FETCH_DATA_FAILURE', payload: mockData.value });
     } else {
-      try {
-        const data = mockApiData;
-        dispatchTimes({ type: 'FETCH_DATA_SUCCESS', payload: data });
-      } catch (error) {
-        dispatchTimes({ type: 'FETCH_DATA_FAILURE', payload: mockApiData })
-      }
+      return availableTimes;
     }
-  };
+  }
 
   useEffect(() => {
-    fetchData('2023-11-20');
+    fetchData(mockApiData);
   }, []);
 
   return (
     <div>
       <h1>Example Times Component</h1>
+      <p data-testid='loading'>Loading: {`${availableTimes.data}`}</p>
       <p data-testid='data'>Data: {`${availableTimes.data}`}</p>
       <p data-testid='error'>Error: {availableTimes.error ? `${availableTimes.error}` : null}</p>
     </div>

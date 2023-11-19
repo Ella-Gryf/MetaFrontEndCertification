@@ -55,8 +55,6 @@ const Main = () => {
       occasion: Yup.string()
         .matches(/^[^-]*$/, 'Please specify the type of occasion'),
     }),
-
-
     onSubmit: values => {
       setSubmissionData(values) // store submission data 
       dispatchSubmit({ type: 'SET_REQUESTED' }); // triggers useEffect(submitAPI) 
