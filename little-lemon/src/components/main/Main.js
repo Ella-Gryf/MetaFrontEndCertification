@@ -103,7 +103,10 @@ const Main = () => {
         <Route path='/about' element={<About />} />
         <Route path='/menu' element={<Menu />} />
         <Route path='/reservations' 
-          element={<BookingPage formik={formik} availableTimes={availableTimes.data} />} />
+          element={<BookingPage formik={formik} 
+                                loading={availableTimes.loading}
+                                error={availableTimes.error}
+                                availableTimes={availableTimes.data} />} />        
         <Route path='/reservations/confirmation' 
           element={<ConfirmedBooking formData={submissionData} />} />
         <Route path='/order' element={<Order />} />   

@@ -7,6 +7,8 @@ const BookingPage = (props) => {
     <div className='booking-page outer-box'>
       <div className='container'>
         <h2>Book a Table</h2>
+        {props.loading && <h3>Loading available times...</h3>}
+        {props.error && <h3>Sorry! {props.error}</h3>}
         <BookingForm {...props} />
       </div>
     </div>
