@@ -7,7 +7,6 @@ const BookingPage = (props) => {
     <div className='booking-page outer-box'>
       <div className='container'>
         <h2>Book a Table</h2>
-
         <BookingForm {...props} />
       </div>
     </div>

@@ -2,6 +2,7 @@ import React, {useState, useReducer, useEffect} from 'react';
 import {Routes, Route, useNavigate } from 'react-router-dom';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
+/* Custom hooks and functions */
 import { dateToday } from '../../functions/dateTime.js';
 import { fetchAPI, submitAPI } from './reservations/mockAPI.js';
 import useTimes from '../../hooks/useTimes.js';
@@ -42,6 +43,7 @@ const Main = () => {
 
     validationSchema: Yup.object({
       date: Yup.string()
+        .min(8, "Date must be of required length")
         .required('Required'),
       time: Yup.string()
         .matches(/^[^-]*$/, 'Please select a booking time')
@@ -56,7 +58,7 @@ const Main = () => {
 
 
     onSubmit: values => {
-      setSubmissionData(values)
+      setSubmissionData(values) // store submission data 
       dispatchSubmit({ type: 'SET_REQUESTED' }); // triggers useEffect(submitAPI) 
     },
   });
@@ -65,8 +67,7 @@ const Main = () => {
   const fetchData = async (date) => {
     dispatchTimes({ type: 'FETCH_DATA_REQUEST' });
     try {
-      const response = await fetchAPI(date);
-      const data = await response;
+      const data = await fetchAPI(date);
       dispatchTimes({ type: 'FETCH_DATA_SUCCESS', payload: data });
     } catch (error) {
       dispatchTimes({ type: 'FETCH_DATA_FAILURE', payload: error.message })
@@ -81,13 +82,10 @@ const Main = () => {
   const submitData = async (formData) => {
     dispatchSubmit({ type: 'SUBMIT_DATA_REQUEST' });
     try {
-      const response = await submitAPI(formData);
-      const data = await response;
+      const data = await submitAPI(formData);
       dispatchSubmit({ type: 'SUBMIT_DATA_SUCCESS', payload: data });
-      navigate('/reservations/confirmation');
-
-      // reset form?      
-
+      navigate('/reservations/confirmation'); // Take user to ConfirmedBooking 
+      formik.resetForm();    
     } catch (error) {
       dispatchSubmit({ type: 'SUBMIT_DATA_FAILURE', payload: error.message });
     };

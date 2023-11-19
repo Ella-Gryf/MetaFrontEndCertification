@@ -77,7 +77,7 @@ const BookingForm = ({formik, availableTimes}) => {
         <button className='btn' type='submit' disabled={!formik.isValid}>Submit</button>
       </div>
     </form>
-  )
-}
+  );
+};
 
 export default BookingForm;
