@@ -12,35 +12,18 @@ const Order = () => {
   return (
     <div className='order outer-box'>
       <div className='container'> 
-
-        <div className="order-option">
+        <section className="order-option" aria-label='order Greek Salad'>
           <img src={greeksalad} alt='salad' className='order-img' />
-          <button className='btn'>
-            <Link to='/order/salad' style={{textDecoration: 'none', color: 'inherit'}}>
-              Greek Salad
-            </Link>
-          </button>
-        </div>
-
-        <div className="order-option">
+          <Link to='/order/salad' className='btn'>Greek Salad</Link>
+        </section>
+        <section className="order-option" aria-label='order bruchetta'>
           <img src={bruchetta} alt='bruchetta' className='order-img' />
-          <button className='btn'>
-            <Link to='/order/bruchetta' style={{textDecoration: 'none', color: 'inherit'}}>
-              Bruchetta
-            </Link>
-          </button>
-        </div>
-        
-        <div className="order-option">
+          <Link to='/order/bruchetta' className='btn'>Bruchetta</Link>
+        </section>
+        <section className="order-option" aria-label='order lemon dessert'>
           <img src={dessert} alt='lemon dessert' className='order-img' />
-          <button className='btn'>
-            <Link to='/order/dessert' style={{textDecoration: 'none', color: 'inherit'}}>
-              Lemon Dessert
-            </Link>
-          </button>
-        </div>
-        
-
+          <Link to='/order/dessert' className='btn'>Lemon Dessert</Link>
+        </section>
       </div>
     </div>
   );

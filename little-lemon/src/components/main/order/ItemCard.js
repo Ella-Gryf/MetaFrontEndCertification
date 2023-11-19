@@ -19,22 +19,22 @@ const ItemCard = ({dish}) => {
   return (
     <div className='item-card outer-box'>
       <div className='container'>
-          <div className='row row-1'>
+          <section className='row row-1' aria-label="Dish item and price">
             <h1>{dish.item}</h1>
             <h2>{`£${dish.price}.00`}</h2>
-          </div>
-          <div className='row row-2'>
-            {(dish.item === 'Greek Salad') && <img src={saladImg} alt='food image'/>}
-            {(dish.item === 'Bruchetta') && <img src={bruchettaImg} alt='food image'/>}
-            {(dish.item === 'Lemon Dessert') && <img src={dessertImg} alt='food image'/>}
+          </section>
+          <section className='row row-2'>
+            {(dish.item === 'Greek Salad') && <img src={saladImg} alt='Image of Greek Salad'/>}
+            {(dish.item === 'Bruchetta') && <img src={bruchettaImg} alt='Image of Bruchetta'/>}
+            {(dish.item === 'Lemon Dessert') && <img src={dessertImg} alt='Image of Lemon Dessert'/>}
             <p className='highlight-text'>{dish.description}</p>
-          </div>
-          <div className='row row-3'>
+          </section>
+          <section className='row row-3' aria-label='choose extras'>
             <ExtrasSelector
               availableExtras={dish.addOns}
               handleExtrasChange={handleExtrasChange}
             />
-          </div>
+          </section>
       </div> 
     </div>
   )

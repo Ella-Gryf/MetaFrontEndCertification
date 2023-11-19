@@ -34,12 +34,12 @@ const ExtrasSelector = ({ availableExtras, handleExtrasChange }) => {
         {availableExtras.map((extra) => (
           <li key={extra.id} className='extra-container'>
             <div className='extra-item'>
-              <span>{extra.name}</span>
+              <p>{extra.name}</p>
             </div>
             <div className='extra-scale'>
-              <button onClick={() => handleDecrement(extra)}>-</button>
-              <span className='quantity'>{selectedExtras[extra.id] || 0}</span>
-              <button onClick={() => handleIncrement(extra)}>+</button>
+              <button onClick={() => handleDecrement(extra)} aria-label='On Click decrement'>-</button>
+              <p className='quantity'>{selectedExtras[extra.id] || 0}</p>
+              <button onClick={() => handleIncrement(extra)} aria-label='On Click increment'>+</button>
             </div>
           </li>
         ))}

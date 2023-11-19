@@ -131,11 +131,6 @@ img {
   font-weight: 500;
 }
 
-.large-btn {
-  width: 250px;
-  height: 60px;
-}
-
 .btn:active {
   transform: translate(4px);
   box-shadow: 0px 0px 1px rgba(0,0,0,0,.2);

@@ -13,7 +13,8 @@ const BookingForm = ({formik, availableTimes}) => {
           id='date' 
           name='date' 
           onChange={formik.handleChange} 
-          value={formik.values.date} />
+          value={formik.values.date} 
+          aria-describedby={formik.touched.date && formik.errors.date ? `${formik.errors.date}` : null}/>
         {(formik.touched.date && formik.errors.date) ? 
           <p className='error-text'>{formik.errors.date}</p> 
           : null}
@@ -25,7 +26,8 @@ const BookingForm = ({formik, availableTimes}) => {
           id='time' 
           name='time' 
           onChange={formik.handleChange} 
-          value={formik.values.time} >
+          value={formik.values.time} 
+          aria-describedby={formik.touched.time && formik.errors.time ? `${formik.errors.time}` : null}>
           <option value={'--select time--'} disabled>--select time--</option>
           {(availableTimes.length > 0) ? 
             (availableTimes.map((time, index) => 
@@ -46,7 +48,8 @@ const BookingForm = ({formik, availableTimes}) => {
           min='1' 
           max='10'
           onChange={formik.handleChange}
-          value={formik.values.guests} />
+          value={formik.values.guests} 
+          aria-describedby={formik.touched.guests && formik.errors.guests ? `${formik.errors.guests}` : null}/>
         {(formik.touched.guests && formik.errors.guests) ? 
           <p className='error-text'>{formik.errors.guests}</p> 
           : null}
@@ -58,7 +61,8 @@ const BookingForm = ({formik, availableTimes}) => {
           id='occasion'
           name='occasion'
           onChange={formik.handleChange}
-          value={formik.values.occasion} >
+          value={formik.values.occasion} 
+          aria-describedby={formik.touched.occasion && formik.errors.occasion ? `${formik.errors.occasion}` : null}>
             <option value={'--select occasion--'} disabled>--select occasion--</option>
             <option value='Birthday'>Birthday</option>
             <option value='Anniversary'>Anniversary</option>
@@ -70,7 +74,7 @@ const BookingForm = ({formik, availableTimes}) => {
       </div>
 
       <div>
-        <button className='btn' type='submit'>Submit</button>
+        <button className='btn' type='submit' disabled={!formik.isValid}>Submit</button>
       </div>
     </form>
   )

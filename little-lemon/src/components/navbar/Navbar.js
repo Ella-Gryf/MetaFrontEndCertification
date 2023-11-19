@@ -11,12 +11,10 @@ const Navbar = () => {
   const handleClick = () => setClick(!click);
 
   return (
-    <div className='nav-bar outer-box'>
+    <header className='nav-bar outer-box'>
       <div className='container'>
-        <header>
-          <img src={logo} alt='logo' className='logo' />
-        </header>
-        <nav className='lead-text'>
+        <img src={logo} alt='restaurant logo' className='logo' />
+        <nav role='navigation' className='lead-text'>
           <ul className={click ? 'nav-menu active' : 'nav-menu'}>
             <li><Link to='/' className='nav-item'>Home</Link></li>
             <li><Link to='/about' className='nav-item'>About</Link></li>
@@ -25,12 +23,12 @@ const Navbar = () => {
             <li><Link to='/order' className='nav-item'>Order Online</Link></li>
             <li><Link to='/login' className='nav-item'>Login</Link></li>        
           </ul>
-          <div className='hamburger' onClick={handleClick}>
+          <div className='hamburger' role='button' aria-label='Toggle Menu' onClick={handleClick}>
             {click ? (<FaRegTimesCircle className='icon' />) : (<HiOutlineMenuAlt4 className='icon' />)}
           </div>
         </nav>
       </div>
-    </div>
+    </header>
   );
 };
 

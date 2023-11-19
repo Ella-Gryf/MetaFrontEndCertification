@@ -8,7 +8,7 @@ const About = () => {
   return (
     <div className='homepage about outer-box'>
       <div className='container grid'>
-        <div className='content left'>
+        <section className='content left' aria-label='Introduction to Little Lemon'>
           <h1>Little Lemon</h1>
           <h2>Chicago</h2>
           <p className='lead-text'>
@@ -20,15 +20,15 @@ const About = () => {
             Amet minim mollit non deserunt ullamco est sit aliqua dolor 
             do amet sint. Velit officia consequat duis enim velit mollit. 
           </p>
-        </div>
-        <div className='content right'>    
+        </section>
+        <section className='content right' aria-label='Images of Mario and Adrian at Little Lemon'>    
           <div className='image-stack--bottom' >
-            <img src={MAa} alt='Mario and Adrian' />
+            <img src={MAa} alt='Mario and Adrian - Image A' />
           </div>
           <div className='image-stack--top'>
-            <img src={MAb} alt='Mario and Adrian' />
+            <img src={MAb} alt='Mario and Adrian - Image B' />
           </div>
-        </div>
+        </section>
       </div>
     </div>
   )
