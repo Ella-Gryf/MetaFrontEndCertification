@@ -1,7 +1,10 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import BookingForm from '../components/main/reservations/BookingForm';
-import { invalidFormikTouched, availableTimesEmpty, availableTimesValid, validFormikTouched } from './testingConstants';
+import { invalidFormikTouched, 
+        availableTimesEmpty, 
+        availableTimesValid, 
+        validFormikTouched } from '../components/test_components/testingConstants';
 
 describe("BookingForm", () => {
 

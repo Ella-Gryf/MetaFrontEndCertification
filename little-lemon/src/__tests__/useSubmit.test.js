@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect'; 
-import ExampleSubmitComponent from './ExampleSubmitComponent';
+import ExampleSubmitComponent from '../components/test_components/ExampleSubmitComponent';
 
 
 describe('useSubmit', () => {

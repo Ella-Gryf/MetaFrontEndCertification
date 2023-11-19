@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react';
-import useSubmit from '../hooks/useSubmit';
+import useSubmit from '../../hooks/useSubmit';
 
 const ExampleSubmitComponent = ({mockApiData}) => {
 

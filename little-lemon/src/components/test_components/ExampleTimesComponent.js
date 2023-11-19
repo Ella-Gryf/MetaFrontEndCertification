@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react';
-import useTimes from '../hooks/useTimes';
+import useTimes from '../../hooks/useTimes';
 
 const ExampleTimesComponent = ({mockApiData}) => {
 
