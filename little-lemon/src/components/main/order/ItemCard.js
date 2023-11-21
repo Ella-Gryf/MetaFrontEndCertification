@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import './ItemCard.css';
 import ExtrasSelector from './ExtrasSelector';
+import basket from '../../../assets/Basket.svg';
 
 import saladImg from '../../../assets/greeksalad.jpg';
 import bruchettaImg from '../../../assets/bruchetta.svg';
@@ -24,9 +25,12 @@ const ItemCard = ({dish}) => {
             <h2>{`£${dish.price}.00`}</h2>
           </section>
           <section className='row row-2'>
-            {(dish.item === 'Greek Salad') && <img src={saladImg} alt='Image of Greek Salad'/>}
-            {(dish.item === 'Bruchetta') && <img src={bruchettaImg} alt='Image of Bruchetta'/>}
-            {(dish.item === 'Lemon Dessert') && <img src={dessertImg} alt='Image of Lemon Dessert'/>}
+            {(dish.item === 'Greek Salad') && 
+            <img className='dish-img' src={saladImg} alt='Image of Greek Salad'/>}
+            {(dish.item === 'Bruchetta') && 
+            <img className='dish-img' src={bruchettaImg} alt='Image of Bruchetta'/>}
+            {(dish.item === 'Lemon Dessert') && 
+            <img className='dish-img' src={dessertImg} alt='Image of Lemon Dessert'/>}
             <p className='highlight-text'>{dish.description}</p>
           </section>
           <section className='row row-3' aria-label='choose extras'>
@@ -34,6 +38,7 @@ const ItemCard = ({dish}) => {
               availableExtras={dish.addOns}
               handleExtrasChange={handleExtrasChange}
             />
+            <img className='icon' src={basket} alt='basket icon, add order to basket' />
           </section>
       </div> 
     </div>

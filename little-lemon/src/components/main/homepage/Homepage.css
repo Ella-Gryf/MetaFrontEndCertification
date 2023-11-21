@@ -2,7 +2,7 @@
 
 .hero {
   background-color: #495E57;
-  height: 60vh;
+  height: 50vh;
 }
 
 .specials {
@@ -36,7 +36,7 @@
 /* grid */
 .hero .container {
   align-items: top;
-  margin-top: 2rem;
+  margin-top: 2.5rem;
 }
 
 /* flex */
@@ -86,7 +86,7 @@
 }
 
 .hero img {
-  max-height: 60vh;
+  max-height: 50vh;
 }
 
 /* Specials */

@@ -2,7 +2,6 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import food from '../../../assets/restaurant-food.jpg';
 
-
 const Hero = () => {
   return (
     <div className='homepage hero outer-box'>

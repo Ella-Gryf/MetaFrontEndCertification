@@ -3,15 +3,15 @@
   color: #edefee; 
   border-radius: 10%;
   text-align: center;
-  width: 400px;
+  width: 350px;
   height: 520px;
   background-color: #f4f4f4;
   position: relative;
 }
 
 .specials-card img {
-  width: 400px;
-  height: 270px;
+  width: 350px;
+  height: 250px;
   object-fit: cover;
 }
 
