@@ -1,5 +1,6 @@
 import React from 'react';
-import './Reservations.css';
+//import './Reservations.css';
+import './Booking.css';
 
 const ConfirmedBooking = ({ formData }) => {
 

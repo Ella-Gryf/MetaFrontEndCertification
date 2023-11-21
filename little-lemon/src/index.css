@@ -108,9 +108,13 @@ p {
 }
 
 .error-text {
-  font-size: 10pt;
-  color: red;
+  font-size: 16pt;
+  color: rgb(240, 38, 38);
   padding-top: 5px;
+}
+
+.yellow-text {
+  color: #f4ce14;
 }
 
 
@@ -128,7 +132,7 @@ img {
   transition: .4s;
   cursor: pointer;
   font-size: 18pt;
-  font-weight: 500;
+  font-weight: 700;
 }
 
 .btn:active {

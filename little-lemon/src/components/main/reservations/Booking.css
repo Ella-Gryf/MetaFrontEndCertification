@@ -1,0 +1,88 @@
+.booking-page {
+  height: 100%;
+  gap: 0;
+}
+
+.booking-page .row {
+  grid-column-start: 1;
+  grid-column-end: -1;
+  height: 100%;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.booking-page .container {
+  height: 100%;
+  margin: auto;
+  width: 100%;
+}
+
+.booking-page .lead-text {
+  color: #fff;
+}
+
+.booking-page h3 {
+  color: #fff;
+}
+
+
+/* Booking Form */
+
+.booking-page .row-1 {
+  background-color: #495E57;
+}
+
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.booking-form .input-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin: 1.5rem 0rem 1.5rem;
+}
+
+.booking-form .input {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.booking-form input,
+.booking-form select {
+  width: 100%;
+  text-align: center;
+  padding: 2rem;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgb(51,51,51,0.5);
+  background-color: #edefee;
+  color: #495E57;
+  font-size: 20pt;
+  font-weight: 800;
+}
+
+/* Images and submit button */
+
+.booking-page .row-2 {
+  background-color: #fff;
+  text-align: center;
+}
+
+.booking-page img {
+  padding: 1rem;
+  border-radius: 10%;
+  height: auto;
+  width: 300px;
+  height: 250px;
+  object-fit: cover;
+}
+
+.booking-page .btn {
+  width: 300px;
+  margin: 1rem 0 1rem;
+}

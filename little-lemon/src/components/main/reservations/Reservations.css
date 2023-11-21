@@ -1,6 +1,6 @@
-.booking-page, .confirmation {
+.booking-page .container, .confirmation {
   height: 80vh;
-  background-color: #fbdabb;
+  background-color: #495E57;
 }
 
 .booking-page .container,
