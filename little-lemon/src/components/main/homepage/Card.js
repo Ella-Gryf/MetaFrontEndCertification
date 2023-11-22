@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import { MdOutlineDeliveryDining } from "react-icons/md";
 import './Card.css'; 
 
 
@@ -13,9 +14,14 @@ const Card = ({image, vars}) => {
         <h4>{`£${vars.price}.00`}</h4>
       </div>
       <p>{vars.description}</p>
-      <Link className='btn order-btn' to='/order' aria-label={`Order ${vars.item} for a delivery`}>
-        Online a delivery
-      </Link>
+      <div className='card-btn'>
+        <Link className='order-btn' to='/order' aria-label={`Order ${vars.item} for a delivery`}>
+          Order a delivery
+        </Link>
+        <Link to='/order' aria-label={`Order ${vars.item} for a delivery`}>
+          <MdOutlineDeliveryDining className='order-btn icon'/>
+        </Link>
+      </div>
     </div>
   );
 };

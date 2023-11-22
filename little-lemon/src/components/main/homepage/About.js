@@ -12,13 +12,14 @@ const About = () => {
           <h1 className='display-title'>Little Lemon</h1>
           <h2>Chicago</h2>
           <p className='lead-text'>
-            Amet minim mollit non deserunt ullamco est sit aliqua dolor 
-            do amet sint. Velit officia consequat duis enim velit mollit. 
-            Exercitation veniam consequat sunt nostrud amet.
+            We are an independent, family-owned business located in the bustling
+            heart of Chicago. 
           </p>
           <p className='lead-text'>
-            Amet minim mollit non deserunt ullamco est sit aliqua dolor 
-            do amet sint. Velit officia consequat duis enim velit mollit. 
+            We strive to source as many of our ingredients as 
+            possible from local farms with certified animal welfare standards. With our 
+            wide range of vegan and vegetarian food, there is something for everyone to 
+            enjoy at Little Lemon!
           </p>
         </section>
         <section className='content right' aria-label='Images of Mario and Adrian at Little Lemon'>    
