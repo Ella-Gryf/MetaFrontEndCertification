@@ -7,7 +7,7 @@ const Hero = () => {
     <div className='homepage hero outer-box'>
       <div className='container grid'>
         <section className='content left'>
-          <h1>Little Lemon</h1>
+          <h1 className='display-title'>Little Lemon</h1>
           <h2>Chicago</h2>
           <p className='lead-text'>
             We are a family owned Mediterranean restaurant, focused on 

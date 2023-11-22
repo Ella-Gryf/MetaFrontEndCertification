@@ -1,17 +1,11 @@
 import React from 'react';
-import { RxCaretDown } from "react-icons/rx";
-import { FaGlassCheers } from "react-icons/fa";
-import { GoPersonFill } from "react-icons/go";
-import { IoMdTime } from "react-icons/io";
 import './Booking.css';
 
 const BookingForm = ({formik, availableTimes}) => {
 
   return (
     <form className='booking-form'>
-
       <div className='input-group'>
-        
         <section className='input'>
           <label className='lead-text' htmlFor='date'>Date</label><br/>
           <input 
@@ -19,6 +13,7 @@ const BookingForm = ({formik, availableTimes}) => {
             id='date' 
             name='date' 
             onChange={formik.handleChange} 
+            onBlur={formik.handleBlur}
             value={formik.values.date} 
             aria-describedby={formik.touched.date && formik.errors.date ? `${formik.errors.date}` : null}
           />
@@ -37,6 +32,7 @@ const BookingForm = ({formik, availableTimes}) => {
             max='10'
             onChange={formik.handleChange}
             value={formik.values.guests} 
+            onBlur={formik.handleBlur}
             aria-describedby={formik.touched.guests && formik.errors.guests ? `${formik.errors.guests}` : null}/>
           {(formik.touched.guests && formik.errors.guests) ? 
             <p className='error-text'>{formik.errors.guests}</p> 
@@ -44,7 +40,6 @@ const BookingForm = ({formik, availableTimes}) => {
         </section>
 
       </div>
-
       <div className='input-group'> 
 
         <section className='input'>
@@ -54,6 +49,7 @@ const BookingForm = ({formik, availableTimes}) => {
             name='time' 
             onChange={formik.handleChange} 
             value={formik.values.time} 
+            onBlur={formik.handleBlur}
             aria-describedby={formik.touched.time && formik.errors.time ? `${formik.errors.time}` : null}>
             <option value={'--select time--'} disabled>Select Time</option>
             {(availableTimes.length > 0) ? 
@@ -73,6 +69,7 @@ const BookingForm = ({formik, availableTimes}) => {
             name='occasion'
             onChange={formik.handleChange}
             value={formik.values.occasion} 
+            onBlur={formik.handleBlur}
             aria-describedby={formik.touched.occasion && formik.errors.occasion ? `${formik.errors.occasion}` : null}>
               <option value={'--select occasion--'} disabled>Select Occasion</option>
               <option value='Birthday'>Birthday</option>
@@ -85,7 +82,6 @@ const BookingForm = ({formik, availableTimes}) => {
         </section>
       
       </div>
-      
     </form>
   );
 };

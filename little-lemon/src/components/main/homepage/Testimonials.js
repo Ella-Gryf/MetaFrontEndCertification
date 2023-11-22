@@ -5,7 +5,7 @@ const Testimonials = () => {
   return (
     <div className='homepage testimonials outer-box'>
       <div className='container flex'>
-        <h1>Testimonials</h1>
+        <h1 className='display-title'>Testimonials</h1>
         <section className='reviews'>
           <div className='feedback review-1'>
             <h5>Review 1</h5>

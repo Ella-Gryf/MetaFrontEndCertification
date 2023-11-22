@@ -18,7 +18,7 @@ const Login = () => {
   return (
     <div className='login outer-box popup-open'>
       <div className='login container'>
-        <h1>Little Lemoners' Club</h1>
+        <h1 className='display-title'>Little Lemoners' Club</h1>
         <section className='btn-group'>
           <button className='btn' onClick={openPopup} aria-label='On Click, join now'>Join Now</button>
           <button className='btn' onClick={openPopup} aria-label='On Click, sign in'>Sign In</button>

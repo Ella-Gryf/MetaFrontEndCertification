@@ -21,7 +21,7 @@ const ItemCard = ({dish}) => {
     <div className='item-card outer-box'>
       <div className='container'>
           <section className='row row-1' aria-label="Dish item and price">
-            <h1>{dish.item}</h1>
+            <h1 className='display-title'>{dish.item}</h1>
             <h2>{`£${dish.price}.00`}</h2>
           </section>
           <section className='row row-2'>

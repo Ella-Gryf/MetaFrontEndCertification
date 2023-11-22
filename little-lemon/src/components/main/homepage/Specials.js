@@ -14,7 +14,7 @@ const Specials = () => {
     <div className='homepage specials outer-box'>
       <div className='container flex'>
         <section className='row row-1'>
-          <h1>This week's specials!</h1>
+          <h1 className='display-title'>This week's specials!</h1>
           <Link className='btn large-btn' to='/menu' aria-label='View the online menu'>Online Menu</Link>
         </section>
         <section className='row row-2'>

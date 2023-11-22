@@ -9,7 +9,7 @@ const About = () => {
     <div className='homepage about outer-box'>
       <div className='container grid'>
         <section className='content left' aria-label='Introduction to Little Lemon'>
-          <h1>Little Lemon</h1>
+          <h1 className='display-title'>Little Lemon</h1>
           <h2>Chicago</h2>
           <p className='lead-text'>
             Amet minim mollit non deserunt ullamco est sit aliqua dolor 

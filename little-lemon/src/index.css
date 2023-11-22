@@ -49,8 +49,8 @@ h3, h4, h5, h6, p {
   font-family: 'Karla';
 }
 
-/* display title */
-h1 {
+h1, .display-title {
+  font-family: 'Markazi Text';
   font-size: 64pt;
   font-weight: 500;
 }
@@ -68,7 +68,7 @@ h3 {
 }
 
 /* card title */
-h4 {
+h4, .card-title {
   font-size: 18pt;
   font-weight: 700;
 }

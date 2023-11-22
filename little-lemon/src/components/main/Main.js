@@ -40,7 +40,6 @@ const Main = () => {
 
   const formik = useFormik({
     initialValues: {...initialFormValues},
-
     validationSchema: Yup.object({
       date: Yup.string()
         .min(8, "Date must be of required length")
@@ -103,12 +102,15 @@ const Main = () => {
         <Route path='/about' element={<About />} />
         <Route path='/menu' element={<Menu />} />
         <Route path='/reservations' 
-          element={<BookingPage formik={formik} 
-                                loading={availableTimes.loading}
-                                error={availableTimes.error}
-                                availableTimes={availableTimes.data} />} />        
+          element={<BookingPage 
+            formik={formik} 
+            loading={availableTimes.loading}
+            error={availableTimes.error}
+            availableTimes={availableTimes.data} />} 
+        />        
         <Route path='/reservations/confirmation' 
-          element={<ConfirmedBooking formData={submissionData} />} />
+          element={<ConfirmedBooking formData={submissionData}/>} 
+        />
         <Route path='/order' element={<Order />} />   
         <Route path='/order/salad' element={<ItemCard dish={greekSalad}/>} />
         <Route path='/order/bruchetta' element={<ItemCard dish={bruchetta} />} />

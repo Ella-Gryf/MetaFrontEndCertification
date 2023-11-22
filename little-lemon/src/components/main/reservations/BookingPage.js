@@ -15,7 +15,7 @@ const BookingPage = (props) => {
     <div className='booking-page outer-box'>
       <div className='row row-1'>
         <div className='container'>
-          <h2 className='yellow-text'>Reservations</h2>
+          <h1 className='display-title'>Reservations</h1>
           {props.loading && <h3>Loading available times...</h3>}
           {props.error && <h3>Sorry! {props.error}</h3>}
           <BookingForm {...props} />
@@ -30,7 +30,7 @@ const BookingPage = (props) => {
             <img src={food} alt='Image of our food' />
           </div>
           <button 
-            className='btn' 
+            className='btn large-btn' 
             type='button' 
             onClick={formik.handleSubmit}
             disabled={!formik.isValid}>
