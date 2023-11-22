@@ -31,7 +31,6 @@ describe('useTimes', () => {
     render(<ExampleTimesComponent mockApiData={mockApiData} />);
 
     const result = screen.getByTestId('error');
-    console.log(result.textContent)
     expect(result.textContent).toEqual(expect.stringContaining(`${mockApiData.value}`));
   });
 

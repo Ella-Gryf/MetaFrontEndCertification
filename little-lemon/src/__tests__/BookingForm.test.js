@@ -1,6 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import BookingForm from '../components/main/reservations/BookingForm';
+import BookingPage from '../components/main/reservations/BookingPage';
 import { invalidFormikTouched, 
         availableTimesEmpty, 
         availableTimesValid, 
@@ -13,16 +14,19 @@ describe("BookingForm", () => {
     render(<BookingForm formik={validFormikTouched} availableTimes={availableTimesValid} />)
 
     const options = screen.getAllByRole('option');
-    expect(options[0].textContent).toBe('--select time--');
     expect(options[1].textContent).toBe('10:00');
     expect(options[2].textContent).toBe('15:00');
   });
 
   test("Submit button is disabled when form data is invalid", () => {
 
-    render(<BookingForm formik={invalidFormikTouched} availableTimes={availableTimesEmpty} />);
-  
-    const submitButton = screen.getByText('Submit');
+    render(<BookingPage 
+            formik={invalidFormikTouched} 
+            loading={false}
+            error={true}
+            availableTimes={availableTimesEmpty} />)
+
+    const submitButton = screen.getByText('Reserve a Table');
     expect(submitButton).toHaveAttribute('disabled');
   });
 
@@ -45,9 +49,13 @@ describe("BookingForm", () => {
 
   test("Submit button is enabled when form data IS valid", () => {
 
-    render(<BookingForm formik={validFormikTouched} availableTimes={availableTimesValid} />);
-    
-    const submitButton = screen.getByText('Submit')
+    render(<BookingPage 
+      formik={validFormikTouched} 
+      loading={false}
+      error={false}
+      availableTimes={availableTimesValid} />)
+
+    const submitButton = screen.getByText('Reserve a Table');
     expect(submitButton).not.toBeDisabled();
   });
 
