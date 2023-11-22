@@ -35,6 +35,14 @@
   height: 2.5rem;
 }
 
+.nav-bar .active-loc {
+  color: #fff;
+  font-weight: 600;
+  background-color: #495E57;
+  padding: .5rem;
+  border-radius: 10px;
+}
+
 @media screen and (max-width:1100px) {
   .nav-bar .hamburger {
       display: block;
@@ -54,7 +62,7 @@
       z-index: 10;
   }
 
-  .nav-bar .active {
+  .nav-bar .active-menu {
       right: 0;
   }
 
